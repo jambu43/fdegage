@@ -157,6 +157,7 @@ export default function MultiStepForm() {
           )}
         </form>
 
+        <p className="mt-4 text-gray-700">Nombre de personnes inscrites : <strong>{signupsCount}</strong></p>
 
         <SuccessModal isOpen={showSuccess} onClose={() => setShowSuccess(false)} />
       </div>

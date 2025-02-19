@@ -25,7 +25,7 @@ function Drawer() {
             </SheetTrigger>
             <SheetContent>
                 <SheetHeader>
-                    <SheetTitle className="text-2xl text-primary uppercase text-bold">PETITION</SheetTitle>
+                    <SheetTitle className="text-2xl text-primary uppercase text-bold">ION</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col py-4 gap-4">
 

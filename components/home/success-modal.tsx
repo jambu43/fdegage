@@ -28,7 +28,7 @@ export function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
               className="w-full bg-red-600 hover:bg-red-700"
               onClick={() => {
                 // Add share functionality here
-                console.log("Share petition")
+                console.log("Share pétition")
               }}
             >
               Partager la pétition
