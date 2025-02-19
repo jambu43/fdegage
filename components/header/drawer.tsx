@@ -19,13 +19,13 @@ function Drawer() {
         <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
                 <Button variant="ghost" className="p-0" >
-                    <Menu className="h-16 w-16" />
+                    <Menu className="h-24 w-24 z-10 text-white" />
                     <span className="sr-only">Menu</span>
                 </Button>
             </SheetTrigger>
             <SheetContent>
                 <SheetHeader>
-                    <SheetTitle className="text-2xl text-primary uppercase text-bold">ION</SheetTitle>
+                    <SheetTitle className="text-2xl text-primary uppercase text-bold">LOGO</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col py-4 gap-4">
 

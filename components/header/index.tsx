@@ -20,7 +20,7 @@ export default async  function Header() {
     const Menu = MarketingMenu
 
     return (
-        <header className="border-b shadow">
+        <header className="relative bg-transparent">
 
             <div className="hidden md:flex items-center justify-between h-16 px-4 max-w-[1400px] mx-auto">
                 <div className="flex items-center gap-8">

@@ -85,10 +85,10 @@ export default function Home() {
 
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
       {/* Header */}
       <Header />
-      <div className="max-w-md mx-auto p-4 bg-[#F4F4F4] min-h-screen">
+      <div className="relative max-w-md mx-auto p-4 bg-[#F4F4F4] min-h-screen">
         <h1 className="text-black font-bold text-xl">
         IL A ÉCHOUÉ, <br /> IL DOIT PARTIR <br /> MAINTENANT !
         </h1>
