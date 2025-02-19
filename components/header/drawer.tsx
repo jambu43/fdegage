@@ -4,13 +4,13 @@ import {
     Sheet,
     SheetContent,
     SheetHeader,
-    SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 import { Button } from "../ui/button"
 import { MOBILE_MENU } from "@/lib/constants"
 import Link from "next/link"
+import Image from "next/image"
 
 
 function Drawer() {
@@ -25,7 +25,7 @@ function Drawer() {
             </SheetTrigger>
             <SheetContent>
                 <SheetHeader>
-                    <SheetTitle className="text-2xl text-primary uppercase text-bold">LOGO</SheetTitle>
+                <Image src='/fdlogo-red.svg' alt='banner'  height={150} width={120} className="text-red-600"/>
                 </SheetHeader>
                 <nav className="flex flex-col py-4 gap-4">
 

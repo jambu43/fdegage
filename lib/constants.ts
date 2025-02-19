@@ -9,10 +9,6 @@ export const MOBILE_MENU = [
     href: "/#",
   },
   {
-    label: "Connexion",
-    href: "/login",
-  },
-  {
     label: "FAQ",
     href: "/faq",
   },
