@@ -40,16 +40,15 @@ export default function Home() {
     e.preventDefault();
     setIsSubmitting(true)
 
-
     try {
-      // Add your form submission logic here
-      // Simulate API call
-
-      const response = await fetch("/api/register", {
+      const response = await fetch("/api/save-signature", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
       });
+    
+      
+
   
       if (response.ok) {
         await new Promise((resolve) => setTimeout(resolve, 1000))
@@ -80,7 +79,7 @@ export default function Home() {
 
 
   return (
-    <main className="min-h-screen relative">
+    <main className="relative">
       {/* Header */}
       <Header />
       <div className="relative max-w-md mx-auto p-4 bg-[#F4F4F4] min-h-screen">
@@ -126,7 +125,7 @@ export default function Home() {
                 className="w-full p-4 bg-[#EDEDED] border-[#EDEDED]  text-black"
                 required
               />
-              <button type="button" onClick={nextStep} className="bg-[#FF1212] text-white p-4 font-black w-full">
+              <button type="button" onClick={nextStep} className="bg-[#FF1212] text-white p-5 rounded-sm font-black w-full">
                 SUIVANT
               </button>
             </div>
@@ -154,13 +153,15 @@ export default function Home() {
               />
               <div className="flex justify-between">
               </div>
-              <button type="button" onClick={prevStep} className="bg-gray-500 text-white p-4 font-black w-full">
+              <button type="button" onClick={prevStep} className="bg-gray-500 text-white p-5 rounded-sm font-black w-full">
                   PRECEDENT
                 </button>
-              <button type="submit" className="bg-[#FF1212] text-white p-4 font-black w-full" disabled={isSubmitting}>
+              <button type="submit" className="bg-[#FF1212] text-white p-5 rounded-sm font-black w-full" disabled={isSubmitting}>
                 {isSubmitting ? "Envoi en cours..." : " JE SIGNE !"}
               </button>
-              
+              <p className="font-light">
+              Les informations que vous nous communiquez sont uniquement utilisées dans le cadre de la campagne fatshi-degage.
+              </p>
             </div>
           )}
         </form>
