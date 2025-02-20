@@ -131,7 +131,7 @@ export default function Home() {
       <Header />
       <div
         className="relative max-w-md mx-auto ml-5 p-4 bg-[#F4F4F4]"
-        style={{ blockSize: "95vh", overflowY: "hidden" }}
+        style={{ overflowY: "hidden" }}
       >
         <h1 className=" font-extrabold text-[40px] leading-[37px]">
           IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR <br /> MAINTENANT !
@@ -154,7 +154,7 @@ export default function Home() {
                     placeholder="Prénom"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black"
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black rounded-sm"
                     required
                   />
                   <input
@@ -163,7 +163,7 @@ export default function Home() {
                     placeholder="Nom"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black rounded-sm"
                     required
                   />
                   <input
@@ -172,7 +172,7 @@ export default function Home() {
                     placeholder="Téléphone ou Email"
                     value={formData.phoneNumber}
                     onChange={handleChange}
-                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black rounded-sm"
                     required
                   />
                   <button
@@ -193,7 +193,7 @@ export default function Home() {
                     placeholder="Ville"
                     value={formData.city}
                     onChange={handleChange}
-                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black rounded-sm"
                     required
                   />
                   <Select
@@ -222,7 +222,7 @@ export default function Home() {
                       type="checkbox"
                       name="infos"
                       onChange={handleChange}
-                      className="appearance-none w-[40px] h-[30px] bg-[#EDEDED] border border-[#b8b8b8] checked:bg-[#ff1212] checked:border-[#ff1212] rounded-md cursor-pointer flex items-center justify-center"
+                      className="appearance-none w-[40px] h-[30px] bg-[#EDEDED] border border-[#b8b8b8] checked:bg-[#ff1212] checked:border-[#ff1212] rounded-md cursor-pointer flex items-center justify-center rounded-sm"
                     />
 
                     <label htmlFor="infos" className="ml-2 font-light text-sm">
