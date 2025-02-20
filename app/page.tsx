@@ -82,7 +82,7 @@ export default function Home() {
     <main className=" ">
       {/* Header */}
       <Header />
-      <div className="relative max-w-md mx-auto p-4 bg-[#F4F4F4]" style={{ blockSize: '70vh',overflowY: "hidden" }}>
+      <div className="relative max-w-md mx-auto p-4 bg-[#F4F4F4]" style={{ blockSize: '85vh',overflowY: "hidden" }}>
         <h1 className=" font-extrabold text-[42px] leading-[40px]">
         IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR  MAINTENA NT !
         </h1>
