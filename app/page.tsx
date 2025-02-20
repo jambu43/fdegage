@@ -196,15 +196,6 @@ export default function Home() {
                     className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
                     required
                   />
-                  <input
-                    type="text"
-                    name="country"
-                    placeholder="Pays"
-                    value={formData.country}
-                    onChange={handleChange}
-                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
-                    required
-                  />
                   <Select
                     options={countries}
                     value={selectedCountry}
