@@ -81,7 +81,7 @@ export default function Home() {
         className="relative max-w-md mx-auto p-4 bg-[#F4F4F4]"
         style={{ blockSize: "72vh", overflowY: "hidden" }}
       >
-        <h1 className=" font-extrabold text-2xl leading-[27px]">
+        <h1 className=" font-extrabold text-[45px] leading-[37px]">
           IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR <br /> MAINTENA NT !
         </h1>
         <p className="text-light text-sm mt-2">
@@ -153,7 +153,6 @@ export default function Home() {
                     className="w-full p-3 bg-[#EDEDED] border-[#EDEDED]  text-black"
                     required
                   />
-                  <div className="flex justify-between"></div>
                   {/* <button
                     type="button"
                     onClick={prevStep}

@@ -46,7 +46,10 @@
 
 body {
   font-family: 'MyFont', sans-serif;
+  @apply overflow-hidden;
 }
+
+
 
 @layer base {
   :root {
