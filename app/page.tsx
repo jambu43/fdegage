@@ -127,7 +127,7 @@ export default function Home() {
       {/* Header */}
       <Header />
       <div
-        className="relative max-w-md mx-auto p-4 bg-[#F4F4F4]"
+        className="relative max-w-md mx-auto ml-5 p-4 bg-[#F4F4F4]"
         style={{ blockSize: "90vh", overflowY: "hidden" }}
       >
         <h1 className=" font-extrabold text-[40px] leading-[37px]">
@@ -151,7 +151,7 @@ export default function Home() {
                     placeholder="Prénom"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black"
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black"
                     required
                   />
                   <input
@@ -160,7 +160,7 @@ export default function Home() {
                     placeholder="Nom"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
                     required
                   />
                   <input
@@ -169,13 +169,13 @@ export default function Home() {
                     placeholder="Téléphone ou Email"
                     value={formData.phoneNumber}
                     onChange={handleChange}
-                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
                     required
                   />
                   <button
                     type="button"
                     onClick={nextStep}
-                    className="bg-[#FF1212] text-white p-4 rounded-sm font-black w-full"
+                    className="bg-[#FF1212] text-white p-4 rounded-sm font-black w-11/12"
                   >
                     SUIVANT
                   </button>
@@ -190,7 +190,7 @@ export default function Home() {
                     placeholder="Ville"
                     value={formData.city}
                     onChange={handleChange}
-                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
                     required
                   />
                   <input
@@ -199,7 +199,7 @@ export default function Home() {
                     placeholder="Pays"
                     value={formData.country}
                     onChange={handleChange}
-                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
                     required
                   />
                   <Select
@@ -214,19 +214,19 @@ export default function Home() {
                       </div>
                     )}
                     placeholder="Sélectionner un pays"
-                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black"
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black"
                   />
 
                   {/* <button
                     type="button"
                     onClick={prevStep}
-                    className="bg-gray-500 text-white p-4 rounded-sm font-black w-full"
+                    className="bg-gray-500 text-white p-4 rounded-sm font-black w-11/12"
                   >
                     PRECEDENT
                   </button> */}
                   <button
                     type="submit"
-                    className="bg-[#FF1212] text-white p-6 rounded-sm font-black w-full"
+                    className="bg-[#FF1212] text-white p-6 rounded-sm font-black w-11/12"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Envoi en cours..." : " JE SIGNE !"}
