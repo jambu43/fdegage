@@ -20,7 +20,7 @@ export default function Home() {
   };
 
   const nextStep = () => setStep(step + 1);
-  const prevStep = () => setStep(step - 1);
+  // const prevStep = () => setStep(step - 1);
 
   const [showSuccess, setShowSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
