@@ -187,15 +187,6 @@ export default function Home() {
 
               {step === 2 && (
                 <div className="space-y-4">
-                  <input
-                    type="text"
-                    name="city"
-                    placeholder="Ville"
-                    value={formData.city}
-                    onChange={handleChange}
-                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black rounded-sm"
-                    required
-                  />
                   <Select
                     options={countries}
                     value={selectedCountry}
@@ -217,6 +208,15 @@ export default function Home() {
                     className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black"
                   />
 
+                  <input
+                    type="text"
+                    name="city"
+                    placeholder="Ville"
+                    value={formData.city}
+                    onChange={handleChange}
+                    className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black rounded-sm"
+                    required
+                  />
                   <div className="flex items-center">
                     <input
                       type="checkbox"
