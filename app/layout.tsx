@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${embedCode.variable} antialiased`}
+        className={`${embedCode.variable} antialiased h-max-[100vh]`}
       >
          <Header />
         {children}

@@ -79,12 +79,12 @@ export default function Home() {
 
 
   return (
-    <main className="relative">
+    <main className=" ">
       {/* Header */}
       <Header />
-      <div className="relative max-w-md mx-auto p-4 bg-[#F4F4F4] min-h-screen">
+      <div className="relative max-w-md mx-auto p-4 bg-[#F4F4F4]" style={{ blockSize: '70vh',overflowY: "hidden" }}>
         <h1 className=" font-extrabold text-[42px] leading-[40px]">
-        IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR  MAINTENANT !
+        IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR  MAINTENA NT !
         </h1>
         <p className="text-light text-[19px] mt-4">
        {signupsCount} ont signé. <br /> Prochain objectif 10.000 !
