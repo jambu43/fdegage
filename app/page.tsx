@@ -3,10 +3,59 @@
 import Header from "@/components/home/header";
 import { SuccessModal } from "@/components/home/success-modal";
 import { useEffect, useState } from "react";
+import Select from "react-select";
+import axios from "axios";
+import Image from "next/image";
+
+interface Country {
+  name: {
+    common: string;
+  };
+  flags: {
+    svg: string;
+  };
+  cca2: string;
+}
+
+interface CountryOption {
+  label: string;
+  value: string;
+  flag: string;
+}
 
 export default function Home() {
   const [step, setStep] = useState(1);
   const [signupsCount, setSignupsCount] = useState(0);
+
+  const [countries, setCountries] = useState<CountryOption[]>([]);
+  const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
+
+  useEffect(() => {
+    async function fetchCountries() {
+      try {
+        const response = await axios.get("https://restcountries.com/v3.1/all");
+        const countryData: CountryOption[] = response.data
+          .map((country: Country) => ({
+            label: country.name.common,
+            value: country.cca2,
+            flag: country.flags.svg,
+          }))
+          .sort((a: CountryOption, b: CountryOption) => a.label.localeCompare(b.label)); // Tri alphabétique
+
+        setCountries(countryData);
+
+        // Sélectionner RDC par défaut (code ISO "CD")
+        const defaultCountry = countryData.find((c) => c.value === "CD");
+        setSelectedCountry(defaultCountry || null);
+      } catch (error) {
+        console.error("Erreur lors du chargement des pays", error);
+      }
+    }
+
+    fetchCountries();
+  }, []);
+
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -82,7 +131,7 @@ export default function Home() {
         style={{ blockSize: "90vh", overflowY: "hidden" }}
       >
         <h1 className=" font-extrabold text-[40px] leading-[37px]">
-          IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR <br /> MAINTENA NT !
+          IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR <br /> MAINTENANT !
         </h1>
         <p className="text-light text-md mt-2">
           {signupsCount} ont signé. <br /> Prochain objectif 10.000 !
@@ -153,6 +202,21 @@ export default function Home() {
                     className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
                     required
                   />
+                  <Select
+                    options={countries}
+                    value={selectedCountry}
+                    onChange={(option) => setSelectedCountry(option)}
+                    getOptionLabel={(e) => e.label}
+                    formatOptionLabel={(e) => (
+                      <div className="flex items-center gap-2">
+                        <Image src={e.flag} alt={e.label} className="w-5 h-5" width={50} height={50} />
+                        {e.label}
+                      </div>
+                    )}
+                    placeholder="Sélectionner un pays"
+                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black"
+                  />
+
                   {/* <button
                     type="button"
                     onClick={prevStep}

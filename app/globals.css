@@ -49,6 +49,10 @@ body {
   @apply overflow-hidden;
 }
 
+.css-13cymwt-control{
+  background: #EDEDED !important;
+  border: none !important;
+}
 
 
 @layer base {
