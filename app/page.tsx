@@ -28,7 +28,9 @@ export default function Home() {
   const [signupsCount, setSignupsCount] = useState(0);
 
   const [countries, setCountries] = useState<CountryOption[]>([]);
-  const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(null);
+  const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(
+    null
+  );
 
   useEffect(() => {
     async function fetchCountries() {
@@ -40,7 +42,9 @@ export default function Home() {
             value: country.cca2,
             flag: country.flags.svg,
           }))
-          .sort((a: CountryOption, b: CountryOption) => a.label.localeCompare(b.label)); // Tri alphabétique
+          .sort((a: CountryOption, b: CountryOption) =>
+            a.label.localeCompare(b.label)
+          ); // Tri alphabétique
 
         setCountries(countryData);
 
@@ -54,7 +58,6 @@ export default function Home() {
 
     fetchCountries();
   }, []);
-
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -128,7 +131,7 @@ export default function Home() {
       <Header />
       <div
         className="relative max-w-md mx-auto ml-5 p-4 bg-[#F4F4F4]"
-        style={{ blockSize: "90vh", overflowY: "hidden" }}
+        style={{ blockSize: "95vh", overflowY: "hidden" }}
       >
         <h1 className=" font-extrabold text-[40px] leading-[37px]">
           IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR <br /> MAINTENANT !
@@ -164,7 +167,7 @@ export default function Home() {
                     required
                   />
                   <input
-                    type="tel"
+                    type="text"
                     name="phoneNumber"
                     placeholder="Téléphone ou Email"
                     value={formData.phoneNumber}
@@ -209,7 +212,13 @@ export default function Home() {
                     getOptionLabel={(e) => e.label}
                     formatOptionLabel={(e) => (
                       <div className="flex items-center gap-2">
-                        <Image src={e.flag} alt={e.label} className="w-5 h-5" width={50} height={50} />
+                        <Image
+                          src={e.flag}
+                          alt={e.label}
+                          className="w-5 h-5"
+                          width={50}
+                          height={50}
+                        />
                         {e.label}
                       </div>
                     )}
@@ -217,6 +226,19 @@ export default function Home() {
                     className="w-11/12 p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black"
                   />
 
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="infos"
+                      onChange={handleChange}
+                      className="appearance-none w-[40px] h-[30px] bg-[#EDEDED] border border-[#b8b8b8] checked:bg-[#ff1212] checked:border-[#ff1212] rounded-md cursor-pointer flex items-center justify-center"
+                    />
+
+                    <label htmlFor="infos" className="ml-2 font-light text-sm">
+                      Je veux être tenu.e au courant de l&apos;avancée de la
+                      pétition.
+                    </label>
+                  </div>
                   {/* <button
                     type="button"
                     onClick={prevStep}
