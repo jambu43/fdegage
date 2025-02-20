@@ -79,12 +79,12 @@ export default function Home() {
       <Header />
       <div
         className="relative max-w-md mx-auto p-4 bg-[#F4F4F4]"
-        style={{ blockSize: "72vh", overflowY: "hidden" }}
+        style={{ blockSize: "90vh", overflowY: "hidden" }}
       >
-        <h1 className=" font-extrabold text-[45px] leading-[37px]">
+        <h1 className=" font-extrabold text-[40px] leading-[37px]">
           IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR <br /> MAINTENA NT !
         </h1>
-        <p className="text-light text-sm mt-2">
+        <p className="text-light text-md mt-2">
           {signupsCount} ont signé. <br /> Prochain objectif 10.000 !
         </p>
         <div className="flex justify-center h-screen mt-3">
@@ -102,7 +102,7 @@ export default function Home() {
                     placeholder="Prénom"
                     value={formData.firstName}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#EDEDED] border-[#EEEEEE] text-black"
+                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black"
                     required
                   />
                   <input
@@ -111,7 +111,7 @@ export default function Home() {
                     placeholder="Nom"
                     value={formData.lastName}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#EDEDED] border-[#EDEDED]  text-black"
+                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
                     required
                   />
                   <input
@@ -120,7 +120,7 @@ export default function Home() {
                     placeholder="Téléphone ou Email"
                     value={formData.phoneNumber}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#EDEDED] border-[#EDEDED]  text-black"
+                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
                     required
                   />
                   <button
@@ -141,7 +141,7 @@ export default function Home() {
                     placeholder="Ville"
                     value={formData.city}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#EDEDED] border-[#EDEDED]  text-black"
+                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
                     required
                   />
                   <input
@@ -150,7 +150,7 @@ export default function Home() {
                     placeholder="Pays"
                     value={formData.country}
                     onChange={handleChange}
-                    className="w-full p-3 bg-[#EDEDED] border-[#EDEDED]  text-black"
+                    className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black"
                     required
                   />
                   {/* <button
@@ -162,7 +162,7 @@ export default function Home() {
                   </button> */}
                   <button
                     type="submit"
-                    className="bg-[#FF1212] text-white p-4 rounded-sm font-black w-full"
+                    className="bg-[#FF1212] text-white p-6 rounded-sm font-black w-full"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Envoi en cours..." : " JE SIGNE !"}
