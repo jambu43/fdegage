@@ -41,7 +41,6 @@ export default function Home() {
     setIsSubmitting(true)
 
 
-
     try {
       // Add your form submission logic here
       // Simulate API call
@@ -61,7 +60,6 @@ export default function Home() {
         alert("Erreur lors de signature.");
       }
 
-
       await new Promise((resolve) => setTimeout(resolve, 1000))
       console.log("Form submitted:", formData)
 
@@ -76,9 +74,6 @@ export default function Home() {
     } finally {
       setIsSubmitting(false)
     }
-
-
-
     
   };
 
@@ -89,10 +84,10 @@ export default function Home() {
       {/* Header */}
       <Header />
       <div className="relative max-w-md mx-auto p-4 bg-[#F4F4F4] min-h-screen">
-        <h1 className="text-black font-bold text-xl">
-        IL A ÉCHOUÉ, <br /> IL DOIT PARTIR <br /> MAINTENANT !
+        <h1 className=" font-extrabold text-[42px] leading-[40px]">
+        IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR  MAINTENANT !
         </h1>
-        <p className="text-black text-sm mt-4">
+        <p className="text-light text-[19px] mt-4">
        {signupsCount} ont signé. <br /> Prochain objectif 10.000 !
         </p>
         <div className="flex justify-center h-screen mt-8">

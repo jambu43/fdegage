@@ -1,0 +1,189 @@
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-ExtraBold.woff2') format('woff2'),
+        url('ConfigCondensed-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-BlackItalic.woff2') format('woff2'),
+        url('ConfigCondensed-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-Black.woff2') format('woff2'),
+        url('ConfigCondensed-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-BoldItalic.woff2') format('woff2'),
+        url('ConfigCondensed-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-ExtraBoldItalic.woff2') format('woff2'),
+        url('ConfigCondensed-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-ExtraBold.woff2') format('woff2'),
+        url('ConfigCondensed-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-Bold.woff2') format('woff2'),
+        url('ConfigCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-SemiBoldItalic.woff2') format('woff2'),
+        url('ConfigCondensed-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-SemiBold.woff2') format('woff2'),
+        url('ConfigCondensed-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-MediumItalic.woff2') format('woff2'),
+        url('ConfigCondensed-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-Medium.woff2') format('woff2'),
+        url('ConfigCondensed-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed Text';
+    src: url('ConfigCondensed-Text.woff2') format('woff2'),
+        url('ConfigCondensed-Text.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-LightItalic.woff2') format('woff2'),
+        url('ConfigCondensed-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed Text';
+    src: url('ConfigCondensed-TextItalic.woff2') format('woff2'),
+        url('ConfigCondensed-TextItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-Light.woff2') format('woff2'),
+        url('ConfigCondensed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-ExtraLightItalic.woff2') format('woff2'),
+        url('ConfigCondensed-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-Thin.woff2') format('woff2'),
+        url('ConfigCondensed-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-ThinItalic.woff2') format('woff2'),
+        url('ConfigCondensed-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-ExtraLight.woff2') format('woff2'),
+        url('ConfigCondensed-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-Italic.woff2') format('woff2'),
+        url('ConfigCondensed-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Config Condensed';
+    src: url('ConfigCondensed-Regular.woff2') format('woff2'),
+        url('ConfigCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
