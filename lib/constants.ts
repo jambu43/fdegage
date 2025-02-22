@@ -1,12 +1,9 @@
 import { ChartNoAxesCombinedIcon, Users2, Briefcase } from "lucide-react";
 export const MOBILE_MENU = [
-  {
-    label: "Créer une pétition",
-    href: "/#",
-  },
+ 
   {
     label: "Découvrir ",
-    href: "/#",
+    href: "/manifeste",
   },
   {
     label: "FAQ",

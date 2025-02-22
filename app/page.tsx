@@ -108,7 +108,8 @@ export default function Home() {
       console.log("Form submitted:", formData);
 
       // Show success modal
-      setShowSuccess(true);
+      // setShowSuccess(true);
+      window.location.href = "/share"; // Remplacez "/nouvelle-url" par l'URL de destination
 
       setFormData({
         firstName: "",
@@ -126,7 +127,7 @@ export default function Home() {
   };
 
   return (
-    <main className=" ">
+    <main className="h-max-[100vh]">
       {/* Header */}
       <Header />
       <div
@@ -222,12 +223,24 @@ export default function Home() {
                       type="checkbox"
                       name="infos"
                       onChange={handleChange}
-                      className="appearance-none w-[40px] h-[30px] bg-[#EDEDED] border border-[#b8b8b8] checked:bg-[#ff1212] checked:border-[#ff1212] rounded-md cursor-pointer flex items-center justify-center rounded-sm"
+                      className=" w-[40px] h-[30px] bg-[#EDEDED] border border-[#b8b8b8] checked:bg-[#ff1212] checked:border-[#ff1212] cursor-pointer flex items-center justify-center rounded-sm"
                     />
 
                     <label htmlFor="infos" className="ml-2 font-light text-sm">
                       Je veux être tenu.e au courant de l&apos;avancée de la
                       pétition.
+                    </label>
+                  </div>
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      name="infos"
+                      onChange={handleChange}
+                      className=" w-[40px] h-[30px] bg-[#EDEDED] border border-[#b8b8b8] checked:bg-[#ff1212] checked:border-[#ff1212] cursor-pointer flex items-center justify-center rounded-sm"
+                    />
+
+                    <label htmlFor="infos" className="ml-2 font-light text-sm">
+                      Afficher mon nom dans liste
                     </label>
                   </div>
                   {/* <button
