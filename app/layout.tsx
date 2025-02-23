@@ -10,7 +10,7 @@ const embedCode = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pétitionp",
+  title: "Pétition en ligne",
   description: "Pétition en ligne",
 };
 
@@ -20,11 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
-        className={`${embedCode.variable} antialiased  bg-[#F4F4F4]`}
+        className={`${embedCode.variable} antialiased  bg-[#F4F4F4] h-[100vh]`}
       >
-         <Header />
+         {/* <Header /> */}
         {children}
       </body>
     </html>
