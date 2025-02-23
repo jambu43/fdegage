@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function ManifestoPage() {
   return (
-    <main className=" bg-white">
+    <main className=" h-full bg-white">
       <div className="max-w-2xl mx-auto px-4">
         {/* Header */}
-        <div className='h-44 relative -mt-20'>
+        <div className='h-24 relative -mt-20'>
         <Link href={'/'}>
         <Image src='/fdlogo-black.svg' alt='banner'  height={150} width={120} className='absolute mt-10 ml-6'/></Link>
       </div>
@@ -17,7 +17,7 @@ export default function ManifestoPage() {
             L&apos;APPEL À L&apos;ACTION.
           </h2>
 
-          <div className="space-y-4 text-gray-800 leading-relaxed">
+          <div className="space-y-4 text-gray-[#909090] leading-relaxed">
             <p>
               Frères et sœurs, regardez autour de vous. Qu&apos;est ce que vous
               voyez ? Des routes défoncées, des écoles qui tombent en ruines,

@@ -127,7 +127,7 @@ export default function Home() {
   };
 
   return (
-    <main className="h-max-[100vh]">
+    <main className="">
       {/* Header */}
       <Header />
       <div
