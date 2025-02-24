@@ -5,14 +5,7 @@ export const MOBILE_MENU = [
     label: "Découvrir ",
     href: "/manifeste",
   },
-  {
-    label: "FAQ",
-    href: "/faq",
-  },
-  {
-    label: "Contact",
-    href: "/#",
-  },
+  
 ];
 
 export const adminMenu = [
