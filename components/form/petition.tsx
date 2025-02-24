@@ -85,7 +85,7 @@ function PetitionForm({ count }: Props) {
           IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR <br /> MAINTENANT !
         </h1>
         <p className="text-light text-md mt-2">
-          {count} ont signé. <br /> Prochain objectif 10.000 !
+          {count} personnes ont signées. <br /> Prochain objectif 10.000 !
         </p>
       </div>
 
