@@ -178,7 +178,7 @@ function PetitionForm({count}:Props) {
                 />
 
                 <label htmlFor="accept_to_show_my_name" className="ml-2 font-light text-sm">
-                  Afficher mon nom dans liste
+                  Ne pas faire apparaître mes nom et contact sur cette pétition.
                 </label>
               </div>
              

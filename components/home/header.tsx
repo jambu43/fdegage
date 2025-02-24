@@ -5,9 +5,9 @@ import Link from 'next/link'
 
 function Header() {
   return (
-    <div className='relative bg-primary min-h-[150px] lg:min-h-[450px]  '>
+    <div className='relative bg-primary min-h-[150px] lg:min-h-[450px] -mt-16 '>
       <Image src={'/tshilolo3.png'}  fill alt='banner' className='object-cover max-w-full left-0'/>
-      <div className='container relative z-20'>
+      <div className='container relative'>
         <Link href={'/'}>
         <Image src={Logo} width={120}  alt='logo' />
         </Link>  

@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={`${embedCode.variable} antialiased  bg-[#F4F4F4] h-[100vh]`}
       >
-         {/* <Header /> */}
+         <Header />
         {children}
       </body>
     </html>
