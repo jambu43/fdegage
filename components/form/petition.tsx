@@ -41,6 +41,8 @@ function PetitionForm({ count }: Props) {
   const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(
     null
   );
+  const [errorMessages, setErrorMessages] = useState<{ [key: string]: string }>({});
+
   useEffect(() => {
     async function fetchCountries() {
       try {
@@ -68,7 +70,26 @@ function PetitionForm({ count }: Props) {
     fetchCountries();
   }, []);
 
-  const nextStep = () => setStep(step + 1);
+  const nextStep = () => {
+    const prenom = document.querySelector('input[name="prenom"]') as HTMLInputElement;
+    const nom = document.querySelector('input[name="nom"]') as HTMLInputElement;
+    const phoneOrEmail = document.querySelector('input[name="phoneOrEmail"]') as HTMLInputElement;
+
+    // Réinitialiser les messages d'erreur
+    setErrorMessages({});
+
+    // Vérifier si tous les champs sont remplis
+    const newErrorMessages: { [key: string]: string } = {};
+    if (!prenom.value) newErrorMessages.prenom = "Ce champ est obligatoire.";
+    if (!nom.value) newErrorMessages.nom = "Ce champ est obligatoire.";
+    if (!phoneOrEmail.value) newErrorMessages.phoneOrEmail = "Ce champ est obligatoire.";
+
+    if (Object.keys(newErrorMessages).length === 0) {
+      setStep(step + 1);
+    } else {
+      setErrorMessages(newErrorMessages);
+    }
+  };
 
   useEffect(() => {
     if (state?.success) {
@@ -100,20 +121,23 @@ function PetitionForm({ count }: Props) {
                 className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black rounded-sm"
                 required
               />
+              {errorMessages.prenom && <p className="text-red-500">{errorMessages.prenom}</p>}
               <Input
                 type="text"
                 name="nom"
                 placeholder="Nom"
-                className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black rounded-sm"
+                className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black rounded-sm"
                 required
               />
+              {errorMessages.nom && <p className="text-red-500">{errorMessages.nom}</p>}
               <Input
                 type="text"
                 name="phoneOrEmail"
                 placeholder="Téléphone ou Email"
-                className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8]  text-black rounded-sm"
+                className="w-full p-4 bg-[#EDEDED] border border-[#b8b8b8] text-black rounded-sm"
                 required
               />
+              {errorMessages.phoneOrEmail && <p className="text-red-500">{errorMessages.phoneOrEmail}</p>}
               <Button
                 type="button"
                 onClick={nextStep}
