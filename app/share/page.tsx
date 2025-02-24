@@ -17,8 +17,15 @@ export default function SharePage() {
     <main className="min-h-screen">
       <Header />
 
-      <div className="max-w-md mx-auto px-4 mt-6">
+      <div className="max-w-md mx-auto px-4 mt-10">
         <div className="">
+          <p className="text-center mb-8 text-gray-500 font-normal">
+            Merci pour votre engagement ! <br />
+
+            Votre signature a bien été enregistrée. Chaque voix compte dans cette démarche pour un avenir meilleur.
+
+            N’hésitez pas à partager cette pétition autour de vous.
+          </p>
           <h2 className="font-extrabold text-[40px] leading-[37px] text-center mb-8">PARTAGEZ LA <br /> PÉTITION.</h2>
 
           <div className="grid grid-cols-5 m-auto gap-4 mb-28">

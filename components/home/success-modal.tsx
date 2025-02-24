@@ -1,6 +1,5 @@
 import { Dialog, DialogContent } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { CheckCircle2 } from "lucide-react"
+import { LoaderCircle } from "lucide-react"
 
 interface SuccessModalProps {
   isOpen: boolean
@@ -13,7 +12,7 @@ export function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
       <DialogContent className="max-w-md rounded-3xl p-6 gap-6">
         <div className="flex flex-col items-center text-center gap-4">
           <div className="rounded-full bg-green-50 p-3">
-            <CheckCircle2 className="w-12 h-12 text-green-600" />
+            <LoaderCircle  className="w-12 h-12 text-green-600 animate-spin ..."  />
           </div>
 
           <div className="space-y-2">
@@ -23,7 +22,7 @@ export function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
             </p>
           </div>
 
-          <div className="flex flex-col w-full gap-3 mt-2">
+          {/* <div className="flex flex-col w-full gap-3 mt-2">
             <Button
               className="w-full bg-red-600 hover:bg-red-700"
               onClick={() => {
@@ -37,7 +36,7 @@ export function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
             <Button variant="outline" className="w-full" onClick={onClose}>
               Fermer
             </Button>
-          </div>
+          </div> */}
         </div>
       </DialogContent>
     </Dialog>
