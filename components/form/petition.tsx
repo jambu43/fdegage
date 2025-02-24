@@ -1,7 +1,7 @@
-'use client'
+"use client";
 import { useEffect, useState, useActionState } from "react";
 import { createPetition } from "@/actions/strapi/petitions/create";
-import Form  from 'next/form'
+import Form from "next/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import Select from "react-select";
@@ -27,76 +27,71 @@ interface CountryOption {
 }
 
 type Props = {
-    count:number
-}
+  count: number;
+};
 
-function PetitionForm({count}:Props) {
-    const router = useRouter()
-    const [state,dispatch,isPending] = useActionState(createPetition,undefined)
-    const [step, setStep] = useState(1);
-    const [countries, setCountries] = useState<CountryOption[]>([]);
-    const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(
-      null
-    );
-    useEffect(() => {
-      async function fetchCountries() {
-        try {
-          const response = await axios.get("https://restcountries.com/v3.1/all");
-          const countryData: CountryOption[] = response.data
-            .map((country: Country) => ({
-              label: country.name.common,
-              value: country.cca2,
-              flag: country.flags.svg,
-            }))
-            .sort((a: CountryOption, b: CountryOption) =>
-              a.label.localeCompare(b.label)
-            ); // Tri alphabétique
-  
-          setCountries(countryData);
-  
-          // Sélectionner RDC par défaut (code ISO "CD")
-          const defaultCountry = countryData.find((c) => c.value === "CD");
-          setSelectedCountry(defaultCountry || null);
-        } catch (error) {
-          console.error("Erreur lors du chargement des pays", error);
-        }
+function PetitionForm({ count }: Props) {
+  const router = useRouter();
+  const [state, dispatch, isPending] = useActionState(
+    createPetition,
+    undefined
+  );
+  const [step, setStep] = useState(1);
+  const [countries, setCountries] = useState<CountryOption[]>([]);
+  const [selectedCountry, setSelectedCountry] = useState<CountryOption | null>(
+    null
+  );
+  useEffect(() => {
+    async function fetchCountries() {
+      try {
+        const response = await axios.get("https://restcountries.com/v3.1/all");
+        const countryData: CountryOption[] = response.data
+          .map((country: Country) => ({
+            label: country.name.common,
+            value: country.cca2,
+            flag: country.flags.svg,
+          }))
+          .sort((a: CountryOption, b: CountryOption) =>
+            a.label.localeCompare(b.label)
+          ); // Tri alphabétique
+
+        setCountries(countryData);
+
+        // Sélectionner RDC par défaut (code ISO "CD")
+        const defaultCountry = countryData.find((c) => c.value === "CD");
+        setSelectedCountry(defaultCountry || null);
+      } catch (error) {
+        console.error("Erreur lors du chargement des pays", error);
       }
-  
-      fetchCountries();
-    }, []);
-   
-    const nextStep = () => setStep(step + 1);
+    }
 
-    
-    useEffect(()=>{
-      if(state?.success){
-        setTimeout(() => {
-          router.replace('/share')
-        }, 5000); // Délai de 5 secondes
-      }
-    },[state?.success, router])
+    fetchCountries();
+  }, []);
 
-    
-  
-    
+  const nextStep = () => setStep(step + 1);
+
+  useEffect(() => {
+    if (state?.success) {
+      setTimeout(() => {
+        router.replace("/share");
+      }, 5000); // Délai de 5 secondes
+    }
+  }, [state?.success, router]);
+
   return (
-    <div
-    className=" bg-[#F4F4F4] container  h-screen"
-  >
-    <div className="mx-auto max-w-md mb-8">
-    <h1 className=" font-extrabold text-[30px] leading-[27px]">
-      IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR <br /> MAINTENANT !
-    </h1>
-    <p className="text-light text-md mt-2">
-      {count} ont signé. <br /> Prochain objectif 10.000 !
-    </p>
+    <div className=" bg-[#F4F4F4] container -mt-4  max-h-[100vh]">
+      <div className="mx-auto max-w-md mb-4">
+        <h1 className=" font-extrabold text-[30px] leading-[27px]">
+          IL A ÉCHOUÉ, <br /> IL DOIT <br /> PARTIR <br /> MAINTENANT !
+        </h1>
+        <p className="text-light text-md mt-2">
+          {count} ont signé. <br /> Prochain objectif 10.000 !
+        </p>
+      </div>
 
-    </div>
-   
-    <div className="mx-auto max-w-md">
-       
+      <div className="mx-auto max-w-md">
         <Form action={dispatch}>
-            <div className={`${step === 1 ? 'block': 'hidden' }`}>
+          <div className={`${step === 1 ? "block" : "hidden"}`}>
             <div className="space-y-4">
               <Input
                 type="text"
@@ -127,11 +122,10 @@ function PetitionForm({count}:Props) {
                 SUIVANT
               </Button>
             </div>
-
-            </div>
+          </div>
 
           {step === 2 && (
-            <div className="space-y-4">    
+            <div className="space-y-4">
               <Select
                 options={countries}
                 value={selectedCountry}
@@ -168,7 +162,10 @@ function PetitionForm({count}:Props) {
                   className=" w-[40px] h-[30px] bg-[#EDEDED] border border-[#b8b8b8] checked:bg-[#ff1212] checked:border-[#ff1212] cursor-pointer flex items-center justify-center rounded-sm"
                 />
 
-                <label htmlFor="accept_to_show_progress" className="ml-2 font-light text-sm">
+                <label
+                  htmlFor="accept_to_show_progress"
+                  className="ml-2 font-light text-sm"
+                >
                   Je veux être tenu.e au courant de l&apos;avancée de la
                   pétition.
                 </label>
@@ -180,11 +177,14 @@ function PetitionForm({count}:Props) {
                   className=" w-[40px] h-[30px] bg-[#EDEDED] border border-[#b8b8b8] checked:bg-[#ff1212] checked:border-[#ff1212] cursor-pointer flex items-center justify-center rounded-sm"
                 />
 
-                <label htmlFor="accept_to_show_my_name" className="ml-2 font-light text-sm">
+                <label
+                  htmlFor="accept_to_show_my_name"
+                  className="ml-2 font-light text-sm"
+                >
                   Ne pas faire apparaître mes nom et contact sur cette pétition.
                 </label>
               </div>
-             
+
               <Button
                 type="submit"
                 className="bg-[#FF1212] text-white p-4 rounded-sm font-black w-full"
@@ -204,8 +204,8 @@ function PetitionForm({count}:Props) {
           onClose={() => setStep(1)}
         />
       </div>
-  </div>
-  )
+    </div>
+  );
 }
 
-export default PetitionForm
+export default PetitionForm;
