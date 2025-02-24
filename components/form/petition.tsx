@@ -1,5 +1,4 @@
 'use client'
-import { SuccessModal } from "@/components/home/success-modal";
 import { useEffect, useState, useActionState } from "react";
 import { createPetition } from "@/actions/strapi/petitions/create";
 import Form  from 'next/form'
@@ -8,6 +7,7 @@ import { Button } from "../ui/button";
 import Select from "react-select";
 import axios from "axios";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface Country {
   name: {
@@ -30,6 +30,7 @@ type Props = {
 }
 
 function PetitionForm({count}:Props) {
+    const router = useRouter()
     const [state,dispatch,isPending] = useActionState(createPetition,undefined)
     const [step, setStep] = useState(1);
     const [countries, setCountries] = useState<CountryOption[]>([]);
@@ -66,7 +67,11 @@ function PetitionForm({count}:Props) {
     const nextStep = () => setStep(step + 1);
 
     
-    
+    useEffect(()=>{
+      if(state?.success){
+        router.replace('/share')
+      }
+    },[state?.success, router])
 
     
   
@@ -191,11 +196,7 @@ function PetitionForm({count}:Props) {
             </div>
           )}
         </Form>
-
-        <SuccessModal
-          isOpen={state?.success as boolean}
-          onClose={() => setStep(1)}
-        />
+       
       </div>
   </div>
   )
